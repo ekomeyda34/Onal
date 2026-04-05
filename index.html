@@ -1,240 +1,117 @@
-Bu modern ve kurumsal tasarımı, çalışan, mobil uyumlu ve SEO dostu bir HTML/CSS koduna döküyorum. Önceki görsellerin kırılması sorununu yaşamamanız için, görselleri ve harita grafiğini doğrudan kodun içine gömülü (Base64) hale getirdim.
-Ayrıca isteğiniz üzerine tıklayınca arayan numaraları ve sağ alt köşeye sabit WhatsApp butonunu ekledim.
-Vizyon Nakliyat V4 - Full Kurumsal Kod
-Aşağıdaki kodu kopyalayıp bir metin dosyasına .html (örneğin: index.html) olarak kaydedin ve çalıştırın. Başka hiçbir dosyaya ihtiyacınız yoktur.
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vizyon Nakliyat | İstanbul Evden Eve, Vinç Kiralama & Eşya Taşıma</title>
+    <title>Vizyon Nakliyat | 0537 875 76 60 | İstanbul Evden Eve & Vinç</title>
     
-    <meta name="description" content="Vizyon Nakliyat: İstanbul Avrupa ve Anadolu yakası başta olmak üzere 81 ile profesyonel eşya taşımacılığı, vinç kiralama, ofis taşıma ve asansörlü nakliyat çözümleri.">
-    <meta name="keywords" content="istanbul nakliyat, avrupa yakası nakliyat, anadolu yakası nakliye, vinç kiralama istanbul, kiralık vinç, şehirler arası nakliyat firması, eşya taşıma, ofis taşıma, vizyon nakliyat">
+    <meta name="description" content="Vizyon Nakliyat: 0537 875 76 60. İstanbul Avrupa ve Anadolu yakası profesyonel eşya taşımacılığı, vinç kiralama ve şehirler arası nakliyat.">
+    <meta name="keywords" content="istanbul nakliyat, 0537 875 76 60, avrupa yakası nakliyat, anadolu yakası nakliyat, vinç kiralama, eşya taşıma">
     
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
     
     <style>
-        /* Temel Ayarlar */
-        :root { --blue: #0d2c54; --orange: #f7941d; --text: #555; --bg: #fcfcfc; --white: #ffffff; }
+        :root { --blue: #0d2c54; --orange: #f7941d; --white: #ffffff; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Poppins', sans-serif; background-color: var(--bg); color: #333; line-height: 1.6; }
-        a { text-decoration: none; color: inherit; }
-        ul { list-style: none; }
-        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
-
-        /* --- Header (Navigasyon) --- */
-        header { background: var(--white); padding: 10px 0; sticky: top; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .header-content { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.8rem; font-weight: 800; color: var(--blue); text-transform: uppercase; }
+        body { font-family: 'Poppins', sans-serif; background-color: #f4f4f4; color: #333; line-height: 1.6; }
+        
+        /* Navigasyon */
+        header { background: var(--white); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .logo { font-size: 1.6rem; font-weight: 800; color: var(--blue); }
         .logo span { color: var(--orange); }
-        
-        nav ul { display: flex; gap: 20px; align-items: center; }
-        nav a { font-weight: 600; font-size: 0.95rem; color: var(--blue); transition: 0.3s; }
-        nav a:hover { color: var(--orange); }
-        
-        .btn-call-header { background: var(--orange); color: var(--white); padding: 10px 20px; border-radius: 5px; font-weight: bold; display: flex; align-items: center; gap: 8px; font-size: 0.9rem; }
-        .btn-call-header:hover { background: #e68a19; }
+        .nav-phone { background: var(--orange); color: white; padding: 10px 15px; border-radius: 5px; font-weight: bold; text-decoration: none; }
 
-        /* --- Hero Section (Ana Banner) --- */
+        /* Slogan Bar */
+        .top-slogan { background: var(--blue); color: var(--orange); text-align: center; padding: 15px; font-weight: 800; font-size: 1.5rem; text-transform: uppercase; border-bottom: 3px solid var(--orange); }
+
+        /* Hero Section */
         .hero { 
-            background: linear-gradient(rgba(13, 44, 84, 0.85), rgba(13, 44, 84, 0.85)), 
-                        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080"><rect width="1920" height="1080" fill="%230d2c54"/><text x="50%" y="50%" font-family="Arial,sans-serif" font-size="60" fill="rgba(255,255,255,0.05)" text-anchor="middle" dy=".3em">VİZYON NAKLİYAT GÖRSELİ</text></svg>');
-            background-size: cover; background-position: center; color: var(--white); 
-            height: 70vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 5%; 
+            background: linear-gradient(rgba(13, 44, 84, 0.8), rgba(13, 44, 84, 0.8)), url('https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover; background-position: center; height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; padding: 20px;
         }
-        .hero h1 { font-family: 'Ubuntu', sans-serif; font-size: 3.5rem; font-weight: 700; margin-bottom: 10px; }
-        .hero p { font-size: 1.4rem; margin-bottom: 30px; max-width: 800px; opacity: 0.9; }
-        .btn-hero { background: var(--orange); color: var(--white); padding: 15px 30px; border-radius: 5px; font-weight: 700; text-transform: uppercase; font-size: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
-        .btn-hero:hover { background: #e68a19; }
+        .hero h1 { font-size: 3rem; margin-bottom: 15px; }
+        .hero p { font-size: 1.2rem; margin-bottom: 25px; }
+        .btn-call { background: var(--orange); color: white; padding: 15px 30px; border-radius: 50px; font-weight: bold; font-size: 1.3rem; text-decoration: none; box-shadow: 0 4px 15px rgba(247, 148, 29, 0.4); }
 
-        /* --- Slogan Bölümü --- */
-        .slogan-bar { background: var(--white); padding: 40px 0; text-align: center; border-bottom: 1px solid #eee; }
-        .slogan-bar h2 { font-size: 3rem; font-weight: 800; color: var(--blue); font-style: italic; }
+        /* Hizmetler */
+        .services { padding: 50px 5%; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card { background: white; padding: 30px; border-radius: 15px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-bottom: 5px solid var(--blue); }
+        .card img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 15px; }
+        .card h3 { color: var(--blue); margin-bottom: 10px; }
 
-        /* --- Hizmetler --- */
-        .services { padding: 80px 0; }
-        .section-title { font-size: 2.5rem; color: var(--blue); margin-bottom: 10px; font-weight: 700; text-align: center; }
-        .section-subtitle { color: var(--text); margin-bottom: 60px; font-size: 1.1rem; text-align: center; }
-        
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
-        .service-card { background: var(--white); border-radius: 10px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.03); border: 1px solid #eee; transition: 0.3s; display: flex; flex-direction: column; }
-        .service-card:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0,0,0,0.06); }
-        
-        /* Gömülü İkonlar (SVG) */
-        .card-icon { width: 100%; height: 200px; background: #f9f9f9; display: flex; align-items: center; justify-content: center; font-size: 5rem; color: var(--orange); }
-        
-        .card-content { padding: 30px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
-        .card-content h3 { color: var(--blue); font-size: 1.5rem; margin-bottom: 15px; font-weight: 700; }
-        .card-content p { color: var(--text); font-size: 0.95rem; margin-bottom: 25px; }
-        .btn-card { color: var(--orange); font-weight: 600; font-size: 0.9rem; display: flex; align-items: center; gap: 5px; }
+        /* Footer & SEO */
+        footer { background: #111; color: #ccc; padding: 40px 5%; text-align: center; }
+        .tags { margin-top: 20px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+        .tag { background: #222; padding: 5px 10px; border-radius: 4px; font-size: 0.8rem; }
 
-        /* --- Harita ve Bölgeler (SEO) --- */
-        .locations { padding: 80px 0; background-color: var(--white); }
-        .locations-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; align-items: center; }
-        
-        .map-wrapper { text-align: center; padding: 20px; border: 1px solid #eee; border-radius: 10px; background: #fcfcfc; }
-        
-        .regions-text h3 { color: var(--blue); font-size: 2rem; margin-bottom: 20px; font-weight: 700; }
-        .regions-text ul li { position: relative; padding-left: 20px; margin-bottom: 8px; font-size: 0.95rem; }
-        .regions-text ul li:before { content: "•"; color: var(--orange); position: absolute; left: 0; font-weight: bold; }
+        /* WhatsApp Sabit Buton */
+        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); z-index: 2000; text-decoration: none; }
 
-        /* --- Footer (Alt Bilgi) --- */
-        footer { background: #111; color: #bbb; padding: 60px 0 20px; font-size: 0.9rem; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; }
-        .footer-section h4 { color: var(--white); margin-bottom: 20px; font-size: 1.1rem; font-weight: 700; }
-        .footer-section p { margin-bottom: 10px; }
-        .footer-tag-cloud { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
-        .tag { background: #333; color: #ccc; padding: 5px 12px; border-radius: 5px; font-size: 13px; border: 1px solid #444; }
-        
-        .footer-bottom { border-top: 1px solid #222; padding-top: 20px; margin-top: 40px; text-align: center; color: #777; font-size: 0.8rem; }
-
-        /* Sabit WhatsApp Butonu */
-        .whatsapp-float {
-            position: fixed; width: 60px; height: 60px; bottom: 40px; right: 40px;
-            background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center;
-            font-size: 30px; box-shadow: 2px 2px 3px #999; z-index: 1000;
-            display: flex; align-items: center; justify-content: center;
-        }
-        .whatsapp-float:hover { background-color: #1ebe57; transform: scale(1.1); }
-
-        /* Mobil Düzenlemeler (Responsive) */
         @media (max-width: 768px) {
-            header { padding: 10px 5%; }
-            .header-content { flex-direction: column; gap: 10px; text-align: center; }
-            nav ul { flex-wrap: wrap; justify-content: center; gap: 10px; }
-            .hero h1 { font-size: 2.2rem; }
-            .hero p { font-size: 1rem; }
-            .slogan-bar h2 { font-size: 2rem; }
-            .section-title { font-size: 2rem; }
-            .whatsapp-float { width: 50px; height: 50px; bottom: 20px; right: 20px; font-size: 25px; }
+            .hero h1 { font-size: 2rem; }
+            .top-slogan { font-size: 1.1rem; }
         }
     </style>
 </head>
 <body>
 
-<a href="https://wa.me/905000000000" class="whatsapp-float" target="_blank" title="WhatsApp'tan Yazın">
-    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="white"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.588-5.946 0-6.56 5.333-11.891 11.893-11.891 3.181 0 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.481 8.403 0 6.561-5.333 11.892-11.893 11.892-1.99 0-3.951-.499-5.702-1.448l-6.292 1.658zm5.022-3.31a9.916 9.916 0 0 0 5.033 1.355c5.441 0 9.869-4.426 9.869-9.869 0-2.636-1.027-5.115-2.89-6.98a9.818 9.818 0 0 0-6.98-2.889c-5.441 0-9.868 4.426-9.868 9.869 0 2.098.659 4.153 1.903 5.923l-1.01 3.686 3.784-.995zM16.1 13.9c-.3-.15-1.75-.86-2.02-.96-.26-.1-.45-.15-.65.15s-.75.95-.92 1.15c-.17.19-.34.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.48-1.76-1.65-2.05-.17-.3-.02-.46.13-.61.14-.13.3-.34.45-.51.15-.17.2-.29.3-.49.1-.19.05-.36-.02-.51-.07-.15-.65-1.56-.89-2.14-.23-.56-.47-.48-.65-.49h-.55c-.2 0-.53.07-.81.37-.27.3-1.05 1.03-1.05 2.51s1.08 2.91 1.23 3.11c.15.2 2.12 3.23 5.13 4.53.72.31 1.28.5 1.72.64.72.23 1.38.19 1.9.12.58-.08 1.75-.72 2-1.38.25-.66.25-1.23.18-1.38-.08-.15-.28-.23-.58-.38z"/></svg>
-</a>
+<div class="top-slogan">"BİZ TAŞIYALIM, SİZ STRES YAPMAYIN!"</div>
 
 <header>
-    <div class="container header-content">
-        <a href="#" class="logo">VİZYON <span>NAKLİYAT</span></a>
-        <nav>
-            <ul>
-                <li><a href="#anasayfa">Anasayfa</a></li>
-                <li><a href="#hizmetler">Hizmetlerimiz</a></li>
-                <li><a href="#bolgeler">Bölgeler</a></li>
-                <li><a href="#iletisim">İletişim</a></li>
-                <li><a href="tel:4440000" class="btn-call-header">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M20 22.621l-3.521-6.795c-.008.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.813-4.544-8.919.058-.028 2.021-1.01 2.021-1.01l-3.35-6.908s-2.021 1.01-2.021 1.01c-1.457.721-3.471 2.402-2.744 5.041.731 2.639 4.87 11.77 7.574 13.045 2.699 1.277 5.378-.4 6.626-1.007.01-.005 2.023-1.01 2.023-1.01z"/></svg>
-                    444 X XXX</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
+    <div class="logo">VİZYON <span>NAKLİYAT</span></div>
+    <a href="tel:+905378757660" class="nav-phone">📞 0537 875 76 60</a>
 </header>
 
-<section class="hero" id="anasayfa">
-    <h1>Profesyonel Nakliyat & Vinç</h1>
-    <p>İstanbul Avrupa, Anadolu Yakası ve 81 İlde Güvenilir Lojistik Çözümleri</p>
-    <a href="tel:4440000" class="btn-hero">Hemen Teklif Al</a>
+<section class="hero">
+    <h1>Profesyonel Taşıma & Vinç Hizmeti</h1>
+    <p>İstanbul Avrupa ve Anadolu Yakası - 81 İle Nakliyat</p>
+    <a href="tel:+905378757660" class="btn-call">TIKLA ARA: 0537 875 76 60</a>
 </section>
 
-<section class="slogan-bar">
-    <div class="container">
-        <h2>"Biz Taşıyalım, Siz Stres Yapmayın!"</h2>
+<section class="services">
+    <div class="card">
+        <img src="https://images.pexels.com/photos/1109543/pexels-photo-1109543.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Ev Taşıma">
+        <h3>Evden Eve Nakliyat</h3>
+        <p>Elemanlarımız eşyalarınızı paketler ve panelvan/kamyonet araçlarımızla güvenle taşır.</p>
+        <a href="tel:+905378757660" style="color: var(--orange); font-weight: bold;">Fiyat Al ></a>
+    </div>
+    <div class="card">
+        <img src="https://images.pexels.com/photos/631411/pexels-photo-631411.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Vinç Taşıma">
+        <h3>Vinçli Eşya Taşıma</h3>
+        <p>Yüksek katlara ve ağır yüklere özel vinç çözümleri sunuyoruz.</p>
+        <a href="tel:+905378757660" style="color: var(--orange); font-weight: bold;">Fiyat Al ></a>
+    </div>
+    <div class="card">
+        <img src="https://images.pexels.com/photos/93398/pexels-photo-93398.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Şehirler Arası">
+        <h3>Şehirler Arası Nakliyat</h3>
+        <p>İstanbul'dan Türkiye'nin her iline ve ilçesine günlük seferlerimiz mevcuttur.</p>
+        <a href="tel:+905378757660" style="color: var(--orange); font-weight: bold;">Fiyat Al ></a>
     </div>
 </section>
 
-<section class="services" id="hizmetler">
-    <div class="container">
-        <h2 class="section-title">Kurumsal Hizmetlerimiz</h2>
-        <p class="section-subtitle">Evden eve nakliyattan ağır yük taşımacılığına kadar tam hizmet.</p>
-        
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="card-icon">🏠</div>
-                <div class="card-content">
-                    <h3>Evden Eve Nakliyat</h3>
-                    <p>Eşyalarınız uzman ekiplerimizce paketlenir, panelvan ve kamyonetlerle güvenle taşınır.</p>
-                    <a href="tel:4440000" class="btn-card">Bilgi Al & Arayın →</a>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="card-icon">🏗️</div>
-                <div class="card-content">
-                    <h3>Vinç Kiralama & Ağır Yük</h3>
-                    <p>İnşaat, sanayi ve makine taşımacılığı için kiralık vinç çözümleri.</p>
-                    <a href="tel:4440000" class="btn-card">Bilgi Al & Arayın →</a>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="card-icon">🚚</div>
-                <div class="card-content">
-                    <h3>Şehirler Arası Nakliyat</h3>
-                    <p>İstanbul çıkışlı 81 ile güvenli, sigortalı ve garantili parça/tam taşımacılık.</p>
-                    <a href="tel:4440000" class="btn-card">Bilgi Al & Arayın →</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<div style="text-align: center; padding: 40px; background: white;">
+    <h2 style="color: var(--blue);">Hizmet Bölgelerimiz</h2>
+    <p>Avrupa Yakası, Anadolu Yakası, İstanbul Geneli ve Tüm Türkiye.</p>
+    <p><strong>Hemen Arayın: <a href="tel:+905378757660" style="color: var(--orange);">0537 875 76 60</a></strong></p>
+</div>
 
-<section class="locations" id="bolgeler">
-    <div class="container">
-        <div class="locations-grid">
-            <div class="map-wrapper">
-                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="300" viewBox="0 0 800 400"><rect width="800" height="400" fill="#fcfcfc"/><circle cx="200" cy="150" r="10" fill="#f7941d"/><text x="200" y="130" font-family="Arial" font-size="14" fill="#0d2c54" text-anchor="middle">İstanbul</text></svg>
-            </div>
-            <div class="regions-text">
-                <h3>İstanbul Geneli ve 81 İl</h3>
-                <p>Marmara Bölgesi, Avrupa Yakası ve Anadolu Yakası'ndaki tüm ilçelere nakliyemiz vardır.</p>
-                <ul>
-                    <li>Tüm İstanbul (Avrupa & Anadolu)</li>
-                    <li>Marmara Bölgesi Geneli</li>
-                    <li>81 İl Geneli</li>
-                    <li>Şehirler Arası Nakliyat</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<footer id="iletisim">
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-section">
-                <h4>Vizyon Nakliyat</h4>
-                <p>Lojistik ve taşımacılık çözümleri.</p>
-                <p>İstanbul, Türkiye</p>
-                <p><a href="tel:4440000">444 X XXX</a></p>
-            </div>
-            <div class="footer-section">
-                <h4>Kurumsal</h4>
-                <ul>
-                    <li><a href="#">Hakkımızda</a></li>
-                    <li><a href="#hizmetler">Hizmetlerimiz</a></li>
-                    <li><a href="#bolgeler">Bölgeler</a></li>
-                </ul>
-            </div>
-            <div class="footer-section footer-tag-cloud">
-                <h4>Arama Etiketleri (SEO)</h4>
-                <span class="tag">istanbul nakliyat</span>
-                <span class="tag">ucuz ev taşıma</span>
-                <span class="tag">vinç kiralama istanbul</span>
-                <span class="tag">eşya taşıma</span>
-                <span class="tag">şehirlerarası nakliye</span>
-                <span class="tag">asansörlü nakliyat</span>
-                <span class="tag">ofis taşıma</span>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            &copy; 2026 Vizyon Nakliyat. Tüm Hakları Saklıdır. Google Dostu Web Tasarımı.
-        </div>
+<footer>
+    <p>&copy; 2026 Vizyon Nakliyat - Tüm Hakları Saklıdır.</p>
+    <div class="tags">
+        <span class="tag">istanbul nakliyat</span>
+        <span class="tag">0537 875 76 60</span>
+        <span class="tag">vinç kiralama</span>
+        <span class="tag">evden eve taşıma</span>
+        <span class="tag">panelvan nakliye</span>
+        <span class="tag">kamyonet nakliye</span>
     </div>
 </footer>
 
+<a href="https://wa.me/905378757660" class="whatsapp-float" target="_blank">
+    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" viewBox="0 0 16 16">
+      <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.06 3.973L0 16l4.135-1.085a7.858 7.858 0 0 0 3.858.999h.001c4.367 0 7.926-3.558 7.93-7.93a7.856 7.856 0 0 0-2.322-5.659H13.601zM7.994 14.52a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.17-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+    </svg>
+</a>
+
 </body>
 </html>
-
